@@ -1,6 +1,6 @@
-# Maritime Demo Application
+# Maritime Application
 
-A simple Python hello world application for product demonstration purposes.
+A simple Python hello world application for demonstration purposes.
 
 ## Features
 
