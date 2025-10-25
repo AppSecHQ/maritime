@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "maritime": {
+      "command": "./venv/bin/python",
+      "args": ["mcp_server.py"]
+    }
+  }
+}
