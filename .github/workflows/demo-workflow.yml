@@ -1,0 +1,32 @@
+name: Demo CI Pipeline
+on:
+  push:
+    branches: [ main, master ]
+  pull_request:
+    branches: [ main, master ]
+
+jobs:
+  check-changes:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+      
+      # Using v45 - this was compromised during CVE-2025-30066 incident (March 2025)
+      # Maintainers have since cleaned malicious code, but version is flagged
+      - name: Get changed files
+        id: changed-files
+        uses: tj-actions/changed-files@v45
+        
+      - name: List all changed files
+        run: |
+          echo "Changed files:"
+          echo "${{ steps.changed-files.outputs.all_changed_files }}"
+          
+      - name: Check for security-sensitive changes
+        run: |
+          if [[ "${{ steps.changed-files.outputs.all_changed_files }}" == *".github"* ]]; then
+            echo "⚠️  Workflow files changed - requires security review"
+          fi
