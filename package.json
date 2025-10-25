@@ -1,0 +1,22 @@
+{
+  "name": "maritime-demo",
+  "version": "1.0.0",
+  "description": "Demo app for demonstration",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"No tests yet\""
+  },
+  "dependencies": {
+    "express": "4.17.1",
+    "lodash": "4.17.20",
+    "axios": "0.21.1",
+    "moment": "2.29.1"
+  },
+  "devDependencies": {
+    "webpack": "4.46.0"
+  },
+  "keywords": ["demo", "maritime", "security"],
+  "author": "Max Lacey",
+  "license": "MIT"
+}
