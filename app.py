@@ -13,9 +13,11 @@ init()
 
 def main():
     """Main application entry point"""
-    print(f"{Fore.CYAN}=" * 50)
+#   print(f"{Fore.CYAN}=" * 50)
+    print(f"{Fore.LIGHTCYAN_EX}=" * 50)
+    print(f"{Fore.LIGHTCYAN_EX}=" * 50)
     print(f"{Fore.GREEN}Hello World from Maritime Demo!{Style.RESET_ALL}")
-    print(f"{Fore.CYAN}=" * 50)
+#   print(f"{Fore.CYAN}=" * 50)
 
     # Display current timestamp
     current_time = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
@@ -32,6 +34,9 @@ def main():
         print(f"{Fore.RED}Could not fetch fun fact: {e}{Style.RESET_ALL}")
 
     print(f"\n{Fore.GREEN}Application completed successfully!{Style.RESET_ALL}\n")
+
+    print(f"{Fore.LIGHTCYAN_EX}=" * 50)
+    print(f"{Fore.LIGHTCYAN_EX}=" * 50)
 
 if __name__ == "__main__":
     main()
